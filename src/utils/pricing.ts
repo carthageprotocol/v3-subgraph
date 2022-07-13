@@ -1,22 +1,21 @@
 /* eslint-disable prefer-const */
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
-import { Bundle, Pool, Token } from './../types/schema'
+import { Bundle, Pool, Token } from '../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
-const WETH_ADDRESS = '0x85FA00f55492B0437b3925381fAaf0E024747627'
 const USDC_WETH_03_POOL = '0x4F4E1ccFa1D3B5730372f5C89B1dF248F56CBbE4' //updated to cndl version
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export let WHITELIST_TOKENS: string[] = [
-  WETH_ADDRESS, // WETH
+  '0x85FA00f55492B0437b3925381fAaf0E024747627', // WCNDL
   '0xad43669cbAC863e33449d423261E525de8da0Ff4', // DAI  updated to cndl version
   '0x95A0A7953F9292838C0614D690005D5c716E718E', // USDC  - updated to cndl version
   '0x5c17C48F127D6aE5794b2404F1F8A5CeED419eDf', // ZED
   '0xa018034190943D6c8E10218d9F8E8Af491272411', // SHIBA
   '0xb750990F953B36F806d0327678eCFB4eEFd16979', // WETH
-//  '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643', // cDAI
+  '0x54D94162d5d7DAa54dBdB2D37F8cdA71D7d6795c', // USDT
 //  '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
 //  '0x86fadb80d8d2cff3c3680819e4da99c10232ba0f', // EBASE
 //  '0x57ab1ec28d129707052df4df418d58a2d46d5f51', // sUSD
@@ -35,7 +34,7 @@ export let WHITELIST_TOKENS: string[] = [
 let STABLE_COINS: string[] = [
   '0xad43669cbAC863e33449d423261E525de8da0Ff4', // DAI  updated to cndl version
   '0x95A0A7953F9292838C0614D690005D5c716E718E', // USDC  - updated to cndl version
-//  '0xdac17f958d2ee523a2206206994597c13d831ec7',
+ '0x54D94162d5d7DAa54dBdB2D37F8cdA71D7d6795c', // USDT - updated to cndl
 //  '0x0000000000085d4780b73119b644ae5ecd22b376',
 //  '0x956f47f50a910163d8bf957cf5846d573e7f87ca',
 //  '0x4dd28568d05f09b02220b09c2cb307bfd837cb95'
