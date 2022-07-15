@@ -34,7 +34,7 @@ export let WHITELIST_TOKENS: string[] = [
 let STABLE_COINS: string[] = [
   '0xad43669cbAC863e33449d423261E525de8da0Ff4', // DAI  updated to cndl version
   '0x95A0A7953F9292838C0614D690005D5c716E718E', // USDC  - updated to cndl version
- '0x54D94162d5d7DAa54dBdB2D37F8cdA71D7d6795c', // USDT - updated to cndl
+ '0x54D94162d5d7DAa54dBdB2D37F8cdA71D7d6795c' // USDT - updated to cndl
 //  '0x0000000000085d4780b73119b644ae5ecd22b376',
 //  '0x956f47f50a910163d8bf957cf5846d573e7f87ca',
 //  '0x4dd28568d05f09b02220b09c2cb307bfd837cb95'
